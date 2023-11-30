@@ -1,0 +1,317 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Health+Care - Home</title>
+    <style>
+        ul {
+            display: flex;
+            margin-left: 20px;
+        }
+        li {
+            list-style-type: none;
+            font-family: 'Roboto',sans-serif;
+            font-weight: bolder;
+            font-size: 15px;
+            margin-top: 30px;
+        }
+        #listitem {
+            margin-left: 3rem;
+        }
+        header {
+            display: flex;
+        }
+        .logo img {
+            margin-top: 24px;
+            margin-left: 24px;
+            width: 12rem;
+        }
+        .button-container {
+            position: fixed;
+            right: 10px;
+        }
+        button {
+            
+            margin-right: 25px;
+            margin-top: 2rem;
+            height: 40px;
+            width: 120px;
+            border-radius: 5px;
+            font-family: 'Roboto',sans-serif;
+            background-color: white;
+            border: solid black 1px;
+        }
+        .footer-container {
+            display: flex;
+        }
+        .practo {
+            text-align: left;
+            margin-left: 100px;
+        }
+        .forpatients {
+            text-align: left;
+            margin-left: 250px;
+        }
+        .fordoctors {
+            text-align: left;
+            float: right;
+            margin-left: 300px;
+        }
+        .forhospitals {
+            text-align: left;
+            margin-left: 250px;
+        }
+        footer {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        .footer {
+            background-color: rgb(112, 146, 190);
+            color: #fff;
+            padding: 50px 0;
+            text-align: center;
+        }
+        footer h5 {
+            font-family: 'Dancing Script';
+            text-shadow: 0px 5px 15px black;
+        }
+        .bannerimage img{
+            width: 80rem;
+        }
+        #search{
+            margin: 0px 0px;
+            background-color: transparent;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            width: 400px;
+        }
+        body {
+            font-family: 'Roboto', sans-serif;
+            
+            text-align: center;
+        }
+        .location-selector {
+            border-radius: 5px;
+            width: 300px;
+            padding: 20px;
+            margin-top: 45px;
+        }
+        .location-selector h2 {
+            margin-bottom: 20px;
+        }
+        .input-group {
+            margin-bottom: 20px;
+            display: flex;
+        }
+        .input-group label {
+            display: block;
+            text-align: left;
+            margin-bottom: 5px;
+        }
+        .input-group select {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+        .submit-button {
+            background-color: #3498db;
+            color: #fff;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        .firstimage img{
+            width: 130px;
+        }
+        .thirdimage img{
+            width: 164px;
+        }
+        .fourthimage img{
+            width: 191px;
+        }
+        .fifthimage img{
+            width: 175px;
+        }
+        .color{
+        background-color: red;
+        width: 230px;
+        margin-right: 30px;
+        border-radius: 30px 30px 0px 0px;
+        height: 191px;
+        }
+        .featuredimages{
+            display: flex;
+            justify-content: center;
+            margin-left: 10px;
+            margin-top: 95px;
+            padding: 0;
+        }
+        .featuredimages p{
+            font-size: 12px;
+            color: grey;
+        }
+
+        .featuredimages img{
+            width: 155px;
+        }
+        #fimage{
+            margin-right: 30px;
+            border-radius: 30px;
+            box-shadow: 0px 10px 20px gray;
+            width: 230px;
+        }  
+        .consultation{
+            margin-top: 7rem;
+            text-align: center;
+            margin-left: 6rem;
+        }
+        .consultation button{
+            width: 145px;
+            height: 30px;
+            background-color: black;
+            color: white;
+            margin-top: 10px;
+        }
+        .imagecontainer{
+            display: flex;
+            justify-content: center;
+        }
+        .imagecontainer h5{
+            width: 109px;
+        }
+        .imagecontainer img{
+            width: 108px;
+            margin-top: 2rem;
+            margin-right: 5rem;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="logo"><a href="home.html"><img src="logo.png"alt="logo"></a></div>
+        <nav>
+            <ul>
+                <li id="listitem">Find Doctors</li>
+                <li id="listitem">Video Consult</li>
+                <li id="listitem">Medicine</li>
+                <li id="listitem">Lab Tests</li>
+                <li id="listitem">History</li>
+            </ul>
+        </nav>
+        <div class="button-container">
+            <a href="login.html"><button id="login-button">Login / Sign-Up</button></a>
+        </div>
+    </header>
+    <hr>
+    <main>
+        <div class="location-selector">
+            <form action="submit_location.php" method="post">
+                <div class="input-group">
+                    <select id="location" name="location">
+                        <option value="New-Delhi">New Delhi</option>
+                        <option value="Mumbai">Mumbai</option>
+                        <option value="Chennai">Chennai</option>
+                        <option value="Kolkata">Kolkata</option>
+                    </select>
+                    <input type="search" placeholder="    Search doctors, clinics, hospitals, etc." id="search" style="margin-left: 10px;">
+                </div>
+            </form>
+        </div>
+        <div class="banner">
+            <img src="banner - Copy.png">
+        </div>
+        <div class="featuredimages">
+            <div id="fimage" class="firstimage">
+                <img src="fimg1.png">
+                <h3>Instant Video Consultation</h3>
+                <p>Connect within 60 secs</p>
+            </div>
+            <div id="fimage"><img src="fimg2.png">
+                <h3>Find Doctor Near you</h3>
+                <p>Confirmed appointments</p>
+            </div>
+            <div id="fimage" class="thirdimage"><img src="fimg3.png">
+                <h3>Medicines</h3>
+                <p>Essentials at your doorsteps</p>
+                <br>
+            </div>
+            <div id="fimage" class="fourthimage" ><img src="fimg4.png">
+                <h3>Lab Tests</h3>
+                <p>Sample pickup at your home</p>
+            </div>
+            <div id="fimage" class="fifthimage"><img src="fimg5.png">
+                <h3>Surgery</h3>
+                <p>Safe and trusted Surgery centers</p>
+            </div>
+        </div>
+        <div class="consultation">
+            <h2>Consult top doctors online for any health concern </h2>
+            <p>Private online consultations with verified doctors in all specialists</p>
+            <button> View all specialities</button>    
+        </div>
+        <div class="imagecontainer">
+            <div><img src="himg1.png">
+            <h5>Periodic doubts or Pregenancy</h5>
+            </div>     
+            <div><img src="himg2.png"> 
+            <h5>Acne, Pimple or skin issues</h5>
+            </div>     
+    
+            <div><img src="himg3.png">
+            <h5>Performance issues in Bed</h5>
+            </div>     
+    
+            <div><img src="himg4.png"> 
+            <h5>Cold, cough or fever</h5>
+            </div>     
+            <div><img src="himg5.png"> 
+                <h5>Child not feeling well  </h5>
+            </div>     
+            <div><img src="himg6.png"> 
+                <h5>Depression or anxiety  </h5>
+            </div>     
+    
+    </main>
+    <footer class="footer">
+        <div class="footer-container">
+            <div class="practo">
+                <h5>Health+Care</h5>
+                <a>About</a><br>
+                <a>Blog</a><br>
+                <a>Careers</a><br>
+                <a>Press</a><br>
+                <a>Contact us</a><br>    
+            </div>
+            <div class="forpatients">
+                <h5> For Patients</h5>
+                <a>Search for doctors</a></br>
+                <a>Search for clinics</a></br>
+                <a>Search for hospitals</a></br>
+                <a>Book Diagnostic Tests</a></br>
+                <a>Book Full Body Checkups</a></br>    
+            </div>
+            <div class="fordoctors">
+                <h5> For Doctors</h5>
+                <a>Health+Care Profile</a></br>
+                <h5>For Clinics</h5>
+                <a>Ray by Health+Care</a></br>
+                <a>Health+Care Reach</a></br>
+                <a>Ray Tab</a></br>
+                <a>Health+Care Pro</a></br>
+            </div>
+            <div class="forhospitals">
+                <h5> For Hospitals</h5>
+                <a>Insta</a></br>
+                <a>Quora</a></br>
+                <a>Profile</a></br>
+                <a>Reach</a></br>
+                <a>Drive</a></br>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>
